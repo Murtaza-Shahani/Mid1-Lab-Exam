@@ -104,7 +104,7 @@
     </div>
     
 
-    <div class="container mt-5 back">
+    <div class="container mt-5 main-container bg-dark">">
         <h1 class="feature-heading">Features</h1>
         <div class="row">
             <div class="col-md-6 mb-4">
@@ -140,8 +140,8 @@
         <form>
             <div class="form-row">
                 <div class="form-group">
-                    <label class="form-label" placeholder="placeholder="murtaza" for="full-name">Full Name</label>
-                    <input class="form-input" type="text" id="full-name" name="full-name" required>
+                    <label class="form-label"  for="full-name">Full Name</label>
+                    <input class="form-input" placeholder="murtaza" type="text" id="full-name" name="full-name" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="email">Email</label>
@@ -151,21 +151,50 @@
 
             <div class="form-row">
                 <div class="form-group">
-                    <label class="form-label" placeholder="03083376449" for="contact">Contact</label>
-                    <input class="form-input" type="tel" id="contact" name="contact" required>
+                    <label class="form-label"  for="contact">Contact</label>
+                    <input class="form-input" placeholder="03083376449" type="tel" id="contact" name="contact" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" placeholder="mid1 lab" for="message">Message</label>
-                    <textarea class="form-input" id="message" name="message" rows="4" required></textarea>
+                    <label class="form-label"  for="message">Message</label>
+                    <textarea class="form-input" placeholder="mid1lab" id="message" name="message" rows="4" required></textarea>
                 </div>
             </div>
 
-            <button class="form-button" type="submit">Submit</button>
+            <button class="form-button " type="submit">Submit</button>
         </form>
     </div>
 </div>
 <footer class="footer">
     <h2>
-        All rights reserved @sukkur iba
+        All rights reserved by  @sukkur iba univerity
     </h2>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the form element
+        const form = document.querySelector('.contact-form form');
+
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Get the form elements by their IDs
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const contact = document.getElementById('contact').value;
+            const message = document.getElementById('message').value;
+
+            // Log the form data
+            console.log('Full Name:', fullName);
+            console.log('Email:', email);
+            console.log('Contact:', contact);
+            console.log('Message:', message);
+        });
+    });
+</script>
+
+
+</body>
+</html>
